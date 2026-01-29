@@ -4,6 +4,7 @@ import Header from "../ui/Header";
 import { MdFilterList, MdMoreVert, MdSearch } from 'react-icons/md';
 import { FaCoffee } from 'react-icons/fa';
 
+
 const Layout = () => {
     return (
         <div>            
@@ -43,7 +44,9 @@ const Layout = () => {
             </Header>
             <main className="col-span-12 flex h-full">  
                 <div className="w-8 flex-auto bg-red-500">Satu</div>
-                <div className="w-full flex flex-auto border-x-2 border-[var(--neutral-300)]  max-w-4xl px-2 py-4 flex justify-center">Dua</div>
+                <div className="w-full flex flex-auto border-x-2 border-[var(--neutral-300)]  max-w-4xl px-2 py-4 flex justify-center">Dua
+                    
+                </div>
                 <div className="w-8 flex-auto bg-red-500">Tiga</div>
             </main>
         </div>
