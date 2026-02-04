@@ -1,5 +1,7 @@
+import Card from "@/componens/ui/Card";
 import fetchAPI from "@/utils/fetch";
 import { useState, useEffect } from "react";
+
 
 
 
@@ -16,22 +18,30 @@ const Menu = () => {
             method: 'GET',
         });
         setMenu(result.data)
+        
     }
     fetchMenu();
+       
     }, []);
             
     return (
         <div>
-           {menu.map((item: any) => (
-            <div key={item.id}>
-              <img
-                src={item.image_url}
-                alt={item.name}
-                
-              />
+            <div className="flex justify-center gap-2 flex-wrap">
+                {menu.map((item) => (
+                    <Card key={item.id} 
+                    imageSrc={item.image_url} 
+                    name={item.name} 
+                    price={item.price} 
+                    description={item.description}>  
+
+                    </Card>
+                ))}
+            </div>
+            
+           
         </div>
-           ))}
-        </div>
+           
+        
     )
 }
 

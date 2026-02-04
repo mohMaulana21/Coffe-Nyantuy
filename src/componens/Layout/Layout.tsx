@@ -1,14 +1,16 @@
 import Input from "../ui/Input";
 import Button from "../ui/Button";
-import Header from "../ui/Header";
+import Header from "./Header";
+import Menu from "../pages/Menu";
+import Footer from "./Footer";
 import { MdFilterList, MdMoreVert, MdSearch } from 'react-icons/md';
 import { FaCoffee } from 'react-icons/fa';
 
 
 const Layout = () => {
     return (
-        <div>            
-            <Header className="col-span-12 flex items-center justify-between">
+        <div className="h-screen flex flex-col">            
+            <Header className="col-span-12 flex items-center justify-between flex-shrink-0">
                 <div className="w-8 flex-auto px-4 py-4">
                     <div className="flex items-center gap-2">
                         <FaCoffee className="text-[var(--primary-400)] text-3xl" />
@@ -42,13 +44,18 @@ const Layout = () => {
                     </div>
                </div>        
             </Header>
-            <main className="col-span-12 flex h-full">  
-                <div className="w-8 flex-auto bg-red-500">Satu</div>
-                <div className="w-full flex flex-auto border-x-2 border-[var(--neutral-300)]  max-w-4xl px-2 py-4 flex justify-center">Dua
-                    
+            <main className="col-span-12 flex flex-1 overflow-hidden">  
+                <div className="w-8 flex-auto ">Satu</div>
+                <div className="w-full flex-auto max-w-4xl px-2 py-4 overflow-y-auto border-x border-[var(--neutral-300)]">
+                    <div className="flex flex-col gap-3">
+                        <Menu />
+                    </div>
                 </div>
-                <div className="w-8 flex-auto bg-red-500">Tiga</div>
+                <div className="w-8 flex-auto">Tiga</div>
             </main>
+
+            <Footer className="flex-shrink-0" />
+
         </div>
     )
 }

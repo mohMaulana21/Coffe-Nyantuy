@@ -4,8 +4,8 @@ import Menu from './componens/pages/Menu/Menu';
 
 const App = () => {
   return (
-    // <Layout />
-    <Menu />
+    <Layout />
+    // <Menu />
   )
 }
 
